@@ -4,12 +4,15 @@ const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave")
-
+const clearBtn = document.getElementById("jsClear")
 canvas.width = 700;
 canvas.height = 500;
 
-ctx.fillStyle = "white";
-ctx.fillRect(0,0, 700,500);
+function canvasInit() {
+    ctx.fillStyle = "white";
+    ctx.fillRect(0,0, 700,500);
+}
+canvasInit()
 ctx.strokeStyle = "black";
 ctx.lineWidth = 2.5;
 let painting = false;
@@ -73,6 +76,7 @@ function handleSaveClick(event) {
 function handleContext(event) {
     event.preventDefault();
 }
+
 if (canvas) {
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", startPainting);
@@ -91,4 +95,7 @@ if(mode){
 }
 if(saveBtn){
     saveBtn.addEventListener("click", handleSaveClick)
+}
+if(clearBtn){
+    clearBtn.addEventListener("click", canvasInit)
 }

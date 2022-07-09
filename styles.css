@@ -13,6 +13,7 @@ flex : 엘리먼트들의 크기나 위치를 쉽게 잡아주는 도구
 flex-direction : 정렬방향 설정, 기본은 row 
 align-items : 정렬 */
 .canvas {
+    cursor: crosshair;
     width: 700px;
     height: 500px;
     background-color: white;
@@ -63,6 +64,9 @@ align-items : 정렬 */
 .controls__btns button:active {
     transform: scale(0.98)
 }
+#jsClear {
+    color: red
+}
 .controls__colors .controls__color:active {
     transform: scale(0.98)
 }
@@ -71,3 +75,9 @@ align-items : 정렬 */
     margin-bottom: 30px;
 
 }
+
+.title h1 {
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Lobster';
+  }
